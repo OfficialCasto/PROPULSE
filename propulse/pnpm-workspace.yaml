@@ -1,0 +1,16 @@
+packages:
+  - apps/*
+  - packages/*
+allowBuilds:
+  supabase: true
+  sharp: false
+  esbuild: false
+  unrs-resolver: false
+minimumReleaseAgeExclude:
+  - '@playwright/test@1.65.1'
+  - playwright-core@1.65.1
+  - playwright@1.65.1
+overrides:
+  react: 19.3.0
+  react-dom: 19.3.0
+  '@types/react': 19.3.0

@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "name": "propulse",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": "^24.3.0"
+  },
+  "scripts": {
+    "dev": "turbo dev",
+    "web": "pnpm --filter @propulse/web dev",
+    "mobile": "pnpm --filter @propulse/mobile dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "test": "node --disable-warning=ExperimentalWarning --experimental-strip-types --test tests/*.test.mts",
+    "test:db": "supabase test db",
+    "db:start": "supabase start",
+    "db:reset": "supabase db reset",
+    "db:status": "supabase status",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "turbo": "2.11.11",
+    "typescript": "6.0.3",
+    "eslint": "9.39.4",
+    "typescript-eslint": "8.72.2",
+    "@electric-sql/pglite": "0.5.16",
+    "@playwright/test": "1.65.1",
+    "supabase": "2.109.0"
+  }
+}
